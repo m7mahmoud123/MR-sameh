@@ -17,7 +17,7 @@
     <title>Mr sameh </title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/x-icon" href="./images/Crazy Night Club Music Event Post PSD copy.jpg">
-    <style>
+    <!-- <style>
         /* body {
             display: flex;
             justify-content: center;
@@ -141,7 +141,7 @@
             color: #333;
             margin-bottom: 20px;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -188,7 +188,7 @@
 
 
 
-    <div class="all2">
+    <!-- <div class="all2">
         <div class="container2">
             <form class="login">
                 <h1>تسجيل الدخول للمنصة</h1>
@@ -203,11 +203,11 @@
                     <option value="الصف الثالث الثانوى">الصف الثالث الثانوى</option>
                 </select>
                 <input id="loginBtn" type="button" value="تسجيل الدخول">
-                <!-- <input id="signUpBtn" type="button" value="Sign Up"> -->
+             
             </form>
             <div id="message" class="message"></div>
         </div>
-    </div>
+    </div> -->
     <div class="header">
         <div class="flex">
             <a href="index.html" class="logo"><span class="logo1">Mr </span>Sameh</a>
@@ -657,7 +657,7 @@
             if (name && email && password && phone && grade) {
                 const dbRef = ref(db);
                 get(child(dbRef, 'user/' + name)).then((snapshot) => {
-                    if (snapshot.exists() && snapshot.val().email === email && snapshot.val().password === password) {
+                    if (snapshot.exists() && snapshot.val().email == email && snapshot.val().password == password) {
                         const user = { name, email, password, phone, grade };
                         saveToLocalStorage(user);
                         displayMessage('Login successful! Redirecting...', 'success');
